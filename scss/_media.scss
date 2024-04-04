@@ -1,0 +1,191 @@
+@import "mixins";
+
+@media (max-width: 1400px) {
+  .header {
+    .wrapper {
+    }
+    .logo {
+    }
+    &__logo {
+    }
+    &__navbar {
+    }
+    .navbar {
+      white-space: pre;
+    }
+  }
+  .hero {
+    height: 700px;
+    .wrapper {
+    }
+    &__bone {
+      height: 420px;
+    }
+    &__blob {
+      content: url(/img/hero_blob2.png);
+      object-fit: cover;
+      top: -40px;
+      left: -120px;
+      height: 700px;
+    }
+    &__text {
+      width: 600px;
+    }
+    &__title {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-size: 90px;
+      white-space: pre;
+    }
+    &__subtitle {
+      margin: 0;
+      padding: 0;
+
+      margin-left: 20%;
+      margin-top: 25px;
+      width: 80%;
+    }
+    &__subtitle:not(.subtitle_light) {
+      margin: 0;
+      padding: 0;
+
+      margin-left: 22%;
+      margin-top: 45px;
+      width: 80%;
+    }
+  }
+  .second {
+    height: 700px;
+    .wrapper {
+      padding-left: 20px;
+    }
+    &__hero {
+      height: 420px;
+    }
+    &__title {
+      padding-top: 40px;
+    }
+    &__subtitle {
+      margin-top: 0px;
+    }
+    &__buttons {
+      margin-top: 24px;
+
+      justify-content: baseline;
+    }
+    .button {
+    }
+    .button_left {
+    }
+    .button_right {
+      margin-left: 140px;
+      margin-top: -60px;
+    }
+  }
+  .ourpets {
+    .wrapper {
+    }
+    &__bg {
+      flex-direction: column-reverse;
+
+      right: 0;
+    }
+    &__bone {
+      width: 523px;
+    }
+    &__title {
+      padding-top: 20px;
+    }
+    &__card {
+      flex-direction: column;
+      margin-top: 46px;
+      margin-left: 44px;
+      gap: 25px;
+    }
+    .card__elem {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-direction: row;
+
+      margin-left: 100px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .card__name {
+      font-size: 25px;
+      @include padding(12px, 38px);
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .hero {
+    .wrapper {
+    }
+    &__bone {
+      margin-top: 40px;
+      height: 400px;
+    }
+    &__blob {
+      height: 520px;
+      margin-left: 60px;
+    }
+    &__text {
+      margin-top: 350px;
+      width: 500px;
+    }
+    &__title {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-size: 80px;
+      white-space: pre;
+    }
+    &__subtitle {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    &__subtitle:not(.subtitle_light) {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .header {
+    .wrapper {
+      @include padding(0 0 0 20px);
+    }
+    .logo {
+    }
+    .header__logo {
+    }
+    .header__navbar {
+    }
+    .navbar {
+      ul {
+        // display: none;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 641px) {
+}
+@media (max-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (max-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}

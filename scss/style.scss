@@ -1,0 +1,495 @@
+/* font-family: "Titan One", sans-serif; */
+/* c */
+@font-face {
+  font-family: "STSong";
+  src: url(/fonts/chinese.stsong.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+@import "variables";
+@import "mixins";
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  background-color: $color-bg;
+}
+
+a,
+p {
+  font-size: 30px;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+}
+.logo {
+  content: "";
+}
+
+.title {
+  font-family: "Titan One", sans-serif;
+}
+h1 {
+  font-size: 110px;
+}
+h2 {
+  font-size: 85px;
+}
+h3 {
+  font-size: 80px;
+}
+h4 {
+  font-size: 65px;
+}
+.subtitle_bold {
+  font-weight: 400;
+}
+.subtitle_light {
+  font-weight: 100;
+}
+.subtitle {
+  font-family: "Saira Condensed", sans-serif;
+}
+.button {
+  font-size: 35px;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 177px;
+  height: 75px;
+}
+
+.navbar {
+  display: flex;
+  gap: 33px;
+
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include color(#fff, 0.4);
+  }
+}
+
+.header {
+  height: 91px;
+  margin-top: 15px;
+  .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 100px;
+  }
+  .burger_menu {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 32px;
+    width: 32px;
+    span {
+      display: block;
+      width: 100%;
+      height: 5px;
+      border-radius: 4px;
+
+      @include bgcolor($second-bg, 0.5);
+    }
+  }
+  &__logo {
+    width: 112px;
+    height: 50px;
+  }
+  &__navbar {
+    margin-top: 130px;
+    z-index: 2;
+    ul {
+      @include bgcolor($color-bg, 1);
+      margin-right: 0;
+      @include padding(0 30px 15px 30px);
+      // overflow: hidden;
+      display: flex;
+      gap: 33px;
+    }
+    display: flex;
+    gap: 33px;
+  }
+}
+
+.hero {
+  height: 756px;
+  background-color: $hero-bg;
+  .wrapper {
+    position: relative;
+  }
+
+  &__bone {
+    position: absolute;
+    right: 0;
+    top: 478px;
+  }
+
+  &__blob {
+    user-select: none;
+    position: absolute;
+    left: 28px;
+    top: -76px;
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+    width: 724px;
+    height: 451px;
+    float: right;
+    margin-top: 100px;
+    margin-right: 18px;
+  }
+  .subtitle_holder {
+    margin-top: 77px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  &__title {
+    position: relative;
+    font-weight: 400;
+    margin-right: 18px;
+    margin-bottom: 77px;
+    color: $color-bg;
+  }
+  &__subtitle:not(.subtitle_light) {
+    margin-bottom: 34px;
+    margin-left: 10px;
+    @include color($color-bg, 0.35);
+  }
+  &__subtitle {
+    width: 650px;
+    padding-left: 130px;
+    color: $color-gray;
+  }
+  & * {
+    transition: all 0.25s ease-in-out;
+  }
+}
+
+.second {
+  background-color: $second-bg;
+  height: 815px;
+
+  .wrapper {
+    height: 100%;
+    position: relative;
+    padding: 0 0 0 30px;
+  }
+  &__hero {
+    position: absolute;
+    right: -10px;
+    bottom: 37px;
+  }
+  &__title {
+    position: relative;
+    padding-top: 104px;
+
+    white-space: pre;
+    @include color($our-pets-bg, 0.7);
+  }
+  &__subtitle {
+    position: relative;
+    margin-top: 36px;
+    width: 520px;
+    font-weight: 500;
+    @include color(#fff, 0.63);
+  }
+  &__buttons {
+    position: relative;
+    margin-top: 67px;
+    display: flex;
+    gap: 53px;
+  }
+  .button_left {
+    background-color: $our-pets-bg;
+    color: $color-bg;
+  }
+  .button_right {
+    @include bgcolor($color-bg, 0.5);
+    color: $our-pets-bg;
+  }
+}
+
+.ourpets {
+  height: 930px;
+  background-color: $our-pets-bg;
+  .wrapper {
+    position: relative;
+  }
+  &__bg {
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    z-index: 0;
+  }
+  &__bone {
+    content: "";
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    padding-top: 61px;
+    text-align: center;
+    color: $color-bg;
+  }
+  &__card {
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    column-gap: 50px;
+  }
+  .card__hero {
+    height: 300px;
+  }
+  .card__elem {
+    row-gap: 40px;
+  }
+  .card__name {
+    display: inline-flex;
+    margin-top: 40px;
+    padding: 15px 60px;
+    text-transform: uppercase;
+    font-size: 35px;
+    background-color: $color-bg;
+    color: #fff;
+    font-weight: 500;
+  }
+  .card__elem:first-child > .card__name {
+    background-color: $second-bg;
+  }
+  .card__elem:last-child > .card__name {
+    background-color: $hero-bg;
+    color: #000;
+  }
+}
+
+.signup {
+  height: 990px;
+  .wrapper {
+    position: relative;
+    padding: 111px 104.5px;
+    display: flex;
+    gap: 184.5px;
+
+    height: 100%;
+  }
+  &__hero {
+    position: absolute;
+    left: 189px;
+    bottom: -59px;
+    z-index: -1;
+  }
+  &__blob {
+    position: absolute;
+    right: 58.8px;
+    top: 56.8px;
+    z-index: -1;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 511px;
+  }
+  &__title {
+    @include color($hero-bg, 0.7);
+  }
+  &__sectitle {
+    margin-top: 50px;
+    font-weight: 400;
+    @include color(#fff, 0.63);
+  }
+  &__subtitle {
+    margin-top: 28px;
+    width: 347px;
+    font-weight: 100;
+    @include color(#fff, 0.63);
+  }
+  &__form {
+    height: 100%;
+    display: flex;
+  }
+  input {
+    width: 369px;
+    height: 91px;
+    border-radius: 50px;
+    padding: 18px 47px;
+    border: none;
+
+    margin-bottom: 40px;
+
+    @include bgcolor($color-bg, 0.5);
+    @include color(#fff, 0.5);
+    font-size: 35px;
+    text-transform: uppercase;
+
+    transition: all 0.25s ease-in-out;
+  }
+  input:not(input[type="submit"]) {
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  }
+  ::placeholder {
+    @include color(#fff, 0.5);
+  }
+  input:not(input[type="submit"]):focus {
+    outline: 5px double rgba($color: #724319, $alpha: 0.35);
+    outline-offset: 0px;
+    scale: 0.95;
+    transform: translateX(-20px);
+  }
+  input:first-child {
+    margin-top: 48px;
+  }
+  input:last-child {
+    color: #000;
+    background-color: $hero-bg;
+    text-transform: capitalize;
+    color: $color-bg;
+    transition: all 0.25s ease-in-out;
+  }
+  input[type="submit"]:hover {
+    scale: 0.95;
+  }
+}
+
+.contact {
+  position: relative;
+  height: 931px;
+  background-color: $contact-bg;
+  .wrapper {
+    position: relative;
+  }
+  &__blob {
+    display: none;
+    position: absolute;
+  }
+  &__hero {
+    position: absolute;
+    top: 362px;
+    left: 217px;
+  }
+  &__locate {
+    position: absolute;
+    top: 133px;
+    left: 437px;
+  }
+  &__phone {
+    position: absolute;
+    right: 90px;
+    bottom: -145px;
+  }
+  &__text {
+    margin-top: 116px;
+    position: relative;
+    float: right;
+  }
+  &__title {
+    width: 724px;
+    color: $color-bg;
+  }
+  &__subtitle {
+    margin-top: 47px;
+    margin-left: 114px;
+    width: 540px;
+    font-weight: 600;
+    @include color($color-bg, 0.5);
+  }
+  &__button {
+    margin-left: 400px;
+    margin-top: 83px;
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    display: inline-flex;
+    @include color(#fff, 0.5);
+    @include bgcolor($color-bg, 0.5);
+  }
+  &__address {
+    margin-top: 456px;
+    margin-left: 174px;
+    padding-left: 34px;
+
+    line-height: 2.2ch;
+
+    border-left: 20px solid #c18396;
+    display: inline-flex;
+    font-family: "STSong";
+    font-size: 50px;
+    width: 420px;
+    @include color(#fff, 0.63);
+  }
+}
+
+.footer {
+  height: 465px;
+  @include bgcolor(#000, 0.25);
+  .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__navbar {
+    flex-direction: column;
+    gap: 13px;
+  }
+  &__text {
+    margin-left: 193.5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 48px;
+  }
+  &__title {
+    color: $color-bg;
+  }
+  &__logo {
+    width: 159px;
+  }
+  &__media {
+    display: flex;
+    gap: 31px;
+  }
+  &__copyright {
+    position: absolute;
+    right: 51px;
+    bottom: 42px;
+    font-size: 25px;
+    @include color(#fff, 0.35);
+  }
+}
+
+@import "media";

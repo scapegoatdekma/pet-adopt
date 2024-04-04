@@ -1,0 +1,50 @@
+@mixin color($color, $alpha) {
+  color: rgba($color: $color, $alpha: $alpha);
+}
+@mixin bgcolor($color, $alpha) {
+  background-color: rgba($color: $color, $alpha: $alpha);
+}
+
+// Media Max Font Size
+$maxWidth: 1440;
+@mixin fs($pcSize, $mobSize) {
+  // $максРазм, $минРазм
+  $addSize: $pcSize - $mobSize; // Максимальный размер шрифта
+  $maxWidth: $maxWidth - 420;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+// Media Gap
+@mixin gap($pcSize, $mobSize) {
+  // $максРазм, $минРазм
+  $addSize: $pcSize - $mobSize; // Максимальный размер шрифта
+  $maxWidth: $maxWidth - 420;
+  gap: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+// Media Height
+@mixin height($pcSize, $mobSize) {
+  // $максРазм, $минРазм
+  $addSize: $pcSize - $mobSize; // Максимальный размер шрифта
+  $maxWidth: $maxWidth - 420;
+  height: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+// Media Width
+@mixin width($pcSize, $mobSize) {
+  // $максРазм, $минРазм
+  $addSize: $pcSize - $mobSize; // Максимальный размер шрифта
+  $maxWidth: $maxWidth - 420;
+  width: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+
+// Padding
+@mixin padding($val...) {
+  padding: $val;
+}
