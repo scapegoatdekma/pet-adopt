@@ -61,6 +61,7 @@ h4 {
   font-family: "Saira Condensed", sans-serif;
 }
 .button {
+  white-space: pre;
   font-size: 35px;
   text-transform: uppercase;
 
@@ -114,21 +115,28 @@ h4 {
 
       @include bgcolor($second-bg, 0.5);
     }
+    &:active,
+    &:checked {
+      scale: 0.95;
+      & ~ * {
+        margin-right: 0;
+      }
+    }
   }
   &__logo {
     width: 112px;
     height: 50px;
   }
   &__navbar {
-    margin-top: 130px;
     z-index: 2;
     ul {
       @include bgcolor($color-bg, 1);
       margin-right: 0;
-      @include padding(0 30px 15px 30px);
       // overflow: hidden;
       display: flex;
       gap: 33px;
+
+      transition: all 0.15s ease-in-out;
     }
     display: flex;
     gap: 33px;
@@ -298,13 +306,13 @@ h4 {
     position: relative;
     padding: 111px 104.5px;
     display: flex;
-    gap: 184.5px;
-
+    justify-content: space-between;
+    gap: 180px;
     height: 100%;
   }
   &__hero {
     position: absolute;
-    left: 189px;
+    right: 699px;
     bottom: -59px;
     z-index: -1;
   }
@@ -334,8 +342,10 @@ h4 {
     @include color(#fff, 0.63);
   }
   &__form {
-    height: 100%;
-    display: flex;
+    position: absolute;
+    width: 369px;
+    right: 50px;
+    // height: 100%;
   }
   input {
     width: 369px;
@@ -354,6 +364,7 @@ h4 {
     transition: all 0.25s ease-in-out;
   }
   input:not(input[type="submit"]) {
+    display: inline;
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -390,6 +401,10 @@ h4 {
     position: relative;
   }
   &__blob {
+    display: none;
+    position: absolute;
+  }
+  &__earth {
     display: none;
     position: absolute;
   }
@@ -464,8 +479,6 @@ h4 {
     gap: 13px;
   }
   &__text {
-    margin-left: 193.5px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -475,6 +488,7 @@ h4 {
   }
   &__title {
     color: $color-bg;
+    white-space: pre;
   }
   &__logo {
     width: 159px;
@@ -490,6 +504,20 @@ h4 {
     font-size: 25px;
     @include color(#fff, 0.35);
   }
+}
+
+input:not([type="submit"]),
+input:not([type="checkbox"]) {
+  // исключаем сабмит и чекбокс
+  margin-bottom: 30px;
+}
+
+input:nth-child(-n + 3) {
+  // выбираем первые 3 инпута
+  margin-bottom: 30px;
+}
+input[type="submit"] {
+  margin-bottom: 15px;
 }
 
 @import "media";

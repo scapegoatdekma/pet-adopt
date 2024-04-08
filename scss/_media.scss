@@ -61,6 +61,7 @@
       padding-left: 20px;
     }
     &__hero {
+      right: -60px;
       height: 420px;
     }
     &__title {
@@ -121,29 +122,173 @@
       @include padding(12px, 38px);
     }
   }
+  .signup {
+    height: 1000px;
+    .wrapper {
+      padding: 80px 50px;
+    }
+    .signup__blob {
+      margin-top: 170px;
+      right: 15px;
+      width: 650px;
+    }
+    .signup__hero {
+      right: -160px;
+      height: 400px;
+    }
+    .signup__sectitle {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .signup__subtitle {
+      margin-top: 10px;
+    }
+    .singup__form {
+      width: 300px;
+      position: absolute;
+      margin-top: 210px;
+      right: 200px;
+    }
+    input {
+      width: 300px;
+      height: 70px;
+      border-radius: 50px;
+      padding: 18px 47px;
+
+      margin-bottom: 25px;
+      font-size: 25px;
+    }
+  }
+  .contact {
+    height: 881px;
+    &__blob {
+    }
+    &__hero {
+      z-index: 1;
+      top: 362px;
+      left: 137px;
+    }
+    &__locate {
+      z-index: 1;
+      top: 250px;
+      left: 300px;
+
+      width: 200px;
+    }
+    &__phone {
+      z-index: 2;
+      right: -100px;
+      bottom: -145px;
+    }
+    &__earth {
+      display: inline;
+      top: 160px;
+    }
+    &__text {
+      z-index: 2;
+      position: relative;
+      margin-top: 76px;
+    }
+    &__title {
+      width: 724px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      margin-left: 184px;
+      width: 440px;
+    }
+    &__button {
+      margin-left: 400px;
+      margin-top: -25px;
+    }
+    &__address {
+      position: absolute;
+      margin-top: 456px;
+      margin-left: 100px;
+      padding-left: 34px;
+
+      border-left: 20px solid #c18396;
+      font-size: 50px;
+      width: 420px;
+    }
+  }
+  .footer {
+    .wrapper {
+      padding: 0 25px;
+      justify-content: space-between;
+    }
+    .navbar {
+    }
+    .footer__navbar {
+    }
+    .footer__text {
+      gap: 24px;
+    }
+    .footer__title {
+      // font-size: 60px;
+    }
+    .footer__logo {
+      width: 150px;
+    }
+    .footer__media {
+      gap: 15px;
+      flex-direction: column;
+      img {
+        width: 50px;
+      }
+    }
+    .footer__copyright {
+      font-size: 20px;
+    }
+  }
 }
 
 @media (max-width: 1025px) {
+  .button {
+    height: 50px;
+    width: 120px;
+    font-size: 25px;
+  }
+  p {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 50px;
+  }
+  h4 {
+    font-size: 40px;
+  }
   .hero {
-    .wrapper {
-    }
+    height: 605px;
     &__bone {
-      margin-top: 40px;
-      height: 400px;
+      margin-top: 20px;
+      right: 50%;
+      left: 50%;
+      height: 200px;
     }
     &__blob {
-      height: 520px;
+      height: 508px;
       margin-left: 60px;
+      margin: 0 auto;
+      margin-top: 30px;
     }
     &__text {
-      margin-top: 350px;
-      width: 500px;
+      float: none;
+      margin: 0 auto;
+      padding-top: 370px;
+      width: 400px;
     }
     &__title {
       margin: 0;
       padding: 0;
       width: 100%;
-      font-size: 80px;
+      font-size: 60px;
       white-space: pre;
     }
     &__subtitle {
@@ -155,6 +300,187 @@
       margin: 0;
       padding: 0;
       width: 100%;
+    }
+  }
+  .second {
+    height: 650px;
+    .wrapper {
+      padding-left: 20px;
+    }
+    &__hero {
+      bottom: 10px;
+      right: -60px;
+      height: 316px;
+    }
+    &__title {
+      padding-top: 76px;
+    }
+    &__subtitle {
+      width: 265px;
+      margin-top: -10px;
+    }
+    &__buttons {
+      margin-top: 24px;
+
+      justify-content: baseline;
+    }
+
+    .button_left {
+    }
+    .button_right {
+      margin-left: 65px;
+      margin-top: -50px;
+    }
+  }
+  .ourpets {
+    height: 750px;
+    .wrapper {
+    }
+    &__bg {
+      flex-direction: column-reverse;
+
+      right: 0;
+    }
+    &__bone {
+      width: 363px;
+    }
+    &__title {
+      // font-size: 25px;
+      padding-top: 20px;
+    }
+    &__card {
+      flex-direction: column;
+      margin-top: 36px;
+      margin-left: -80px;
+
+      gap: 50px;
+    }
+    .card__elem {
+      display: flex;
+      gap: 40px;
+
+      margin-left: 100px;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .card__name {
+      font-size: 25px;
+      @include padding(12px, 38px);
+    }
+  }
+  .signup {
+    height: 1072px;
+    .wrapper {
+      padding: 80px 50px;
+    }
+    .signup__blob {
+      margin-top: 280px;
+      right: 15px;
+      width: 375px;
+    }
+    .signup__hero {
+      bottom: 50px;
+      right: -40px;
+      height: 200px;
+    }
+    .signup__sectitle {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    .signup__subtitle {
+      width: 290px;
+      margin-top: 10px;
+    }
+    .singup__form {
+      width: 300px;
+      position: absolute;
+      margin-top: 270px;
+      right: 25px;
+    }
+    input {
+      width: 170px;
+      height: 50px;
+      border-radius: 50px;
+      padding: 9px 24px;
+
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+    input[type="submit"] {
+      margin-top: 110px;
+      margin-left: -10px;
+      background-color: rgba($color: #000000, $alpha: 0);
+      @include color(#fff29c, 0.7);
+      font-size: 35px;
+      // width: 150px;
+      padding: 0;
+      text-decoration: underline;
+    }
+  }
+  .contact {
+    height: 1072px;
+    .wrapper {
+      padding: 4px 28px;
+    }
+    &__blob {
+      width: 500px;
+    }
+    &__hero {
+      width: 520px;
+      z-index: 1;
+      top: 606px;
+      left: 30px;
+    }
+    &__locate {
+      z-index: 1;
+      top: 483px;
+      left: 219px;
+
+      width: 150px;
+    }
+    &__phone {
+      z-index: 2;
+      width: 200px;
+      right: -25px;
+      bottom: -110px;
+    }
+    &__earth {
+      display: inline;
+      top: auto;
+      left: -60px;
+      bottom: 30px;
+    }
+    &__text {
+      z-index: 2;
+      position: relative;
+      margin-top: 50px;
+    }
+    &__title {
+      width: 377px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      margin-left: 33px;
+      width: 326px;
+    }
+    &__button {
+      width: 150px;
+      height: 64px;
+      margin-left: 190px;
+      margin-top: 34px;
+    }
+    &__address {
+      position: absolute;
+      margin-top: 625px;
+      margin-left: 60px;
+      padding-left: 7px;
+
+      border-left: 20px solid #c18396;
+      font-size: 30px;
+      width: 238px;
     }
   }
 }
@@ -171,8 +497,15 @@
     }
     .header__navbar {
     }
+    .burger_menu {
+      margin-top: 20px;
+    }
     .navbar {
+      margin-top: 130px;
+
       ul {
+        margin-right: -160px;
+        @include padding(0 30px 15px 30px);
         // display: none;
         flex-direction: column;
         gap: 4px;
@@ -182,6 +515,49 @@
 }
 
 @media (max-width: 641px) {
+  .footer {
+    height: 485px;
+    .wrapper {
+      padding: 0 25px;
+      justify-content: space-between;
+      padding-top: 104px;
+    }
+    .navbar {
+    }
+    .footer__navbar {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      li {
+        font-size: 25px;
+      }
+    }
+    .footer__text {
+      gap: 100px;
+    }
+    .footer__title {
+      top: 110px;
+      position: absolute;
+      // font-size: 60px;
+    }
+    .footer__logo {
+      width: 150px;
+    }
+    .footer__media {
+      gap: 30px;
+      flex-direction: column;
+      img {
+        width: 40px;
+      }
+    }
+    .footer__copyright {
+      font-size: 18px;
+      right: 25px;
+      bottom: 10px;
+    }
+  }
 }
 @media (max-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
